@@ -3,20 +3,20 @@ import { FaPlay, FaCheckCircle, FaQuoteLeft } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container maxW="container.xl" p={4}>
+    <Container maxW="container.xl" p={4} bg="gray.900" color="gray.100">
       {/* Navigation Bar */}
       <HStack justifyContent="space-between" py={4}>
         <HStack spacing={8}>
           <Image src="/logo.png" alt="TaxPal Logo" boxSize="40px" />
           <HStack spacing={8} as="nav">
-            <Link href="#features" fontSize="lg">Features</Link>
-            <Link href="#testimonials" fontSize="lg">Testimonials</Link>
-            <Link href="#pricing" fontSize="lg">Pricing</Link>
+            <Link href="#features" fontSize="lg" color="gray.100">Features</Link>
+            <Link href="#testimonials" fontSize="lg" color="gray.100">Testimonials</Link>
+            <Link href="#pricing" fontSize="lg" color="gray.100">Pricing</Link>
           </HStack>
         </HStack>
         <HStack spacing={4}>
-          <Button variant="link" fontSize="lg">Sign in</Button>
-          <Button colorScheme="blue" size="lg">Get started today</Button>
+          <Button variant="link" fontSize="lg" color="gray.100">Sign in</Button>
+          <Button colorScheme="blue" size="lg" bg="blue.700">Get started today</Button>
         </HStack>
       </HStack>
 
@@ -25,18 +25,18 @@ const Index = () => {
         <Text fontSize="5xl" fontWeight="bold">
           Accounting <Text as="span" color="blue.500">made simple</Text> for small businesses.
         </Text>
-        <Text fontSize="xl" color="gray.600">
+        <Text fontSize="xl" color="gray.400">
           Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.
         </Text>
         <HStack spacing={4}>
-          <Button colorScheme="blue" size="lg">Get 6 months free</Button>
-          <Button variant="outline" size="lg" leftIcon={<FaPlay />}>Watch video</Button>
+          <Button colorScheme="blue" size="lg" bg="blue.700">Get 6 months free</Button>
+          <Button variant="outline" size="lg" leftIcon={<FaPlay />} color="gray.100" borderColor="gray.100">Watch video</Button>
         </HStack>
       </VStack>
 
       {/* Trusted Companies */}
       <VStack spacing={4} py={10}>
-        <Text fontSize="lg" color="gray.500">Trusted by these six companies so far</Text>
+        <Text fontSize="lg" color="gray.400">Trusted by these six companies so far</Text>
         <HStack spacing={8}>
           <Image src="/logos/transistor.png" alt="Transistor Logo" boxSize="100px" />
           <Image src="/logos/tuple.png" alt="Tuple Logo" boxSize="100px" />
@@ -51,7 +51,7 @@ const Index = () => {
       <HStack spacing={8} py={20} alignItems="center" className="new-section-hstack">
         <VStack align="start" spacing={4} className="new-section-vstack">
           <Text fontSize="4xl" fontWeight="bold">Streamline Your Workflow</Text>
-          <Text fontSize="xl" color="gray.600">Our tools help you manage your business efficiently and effectively.</Text>
+          <Text fontSize="xl" color="gray.400">Our tools help you manage your business efficiently and effectively.</Text>
         </VStack>
         <Image src="/images/workflow.png" alt="Workflow Image" boxSize="400px" />
       </HStack>
@@ -63,17 +63,17 @@ const Index = () => {
           <VStack align="center" spacing={4}>
             <FaCheckCircle size="40px" color="blue.500" />
             <Text fontSize="2xl" fontWeight="bold">Feature One</Text>
-            <Text fontSize="lg" color="gray.600">Description of feature one.</Text>
+            <Text fontSize="lg" color="gray.400">Description of feature one.</Text>
           </VStack>
           <VStack align="center" spacing={4}>
             <FaCheckCircle size="40px" color="blue.500" />
             <Text fontSize="2xl" fontWeight="bold">Feature Two</Text>
-            <Text fontSize="lg" color="gray.600">Description of feature two.</Text>
+            <Text fontSize="lg" color="gray.400">Description of feature two.</Text>
           </VStack>
           <VStack align="center" spacing={4}>
             <FaCheckCircle size="40px" color="blue.500" />
             <Text fontSize="2xl" fontWeight="bold">Feature Three</Text>
-            <Text fontSize="lg" color="gray.600">Description of feature three.</Text>
+            <Text fontSize="lg" color="gray.400">Description of feature three.</Text>
           </VStack>
         </HStack>
       </VStack>
@@ -83,10 +83,10 @@ const Index = () => {
         <Text fontSize="4xl" fontWeight="bold">What Our Clients Say</Text>
         <VStack align="center" spacing={4} maxW="600px" textAlign="center">
           <FaQuoteLeft size="40px" color="blue.500" />
-          <Text fontSize="xl" color="gray.600">"This product has transformed the way we do business. It's user-friendly and incredibly efficient."</Text>
+          <Text fontSize="xl" color="gray.400">"This product has transformed the way we do business. It's user-friendly and incredibly efficient."</Text>
           <Image src="/images/client.jpg" alt="Client Image" boxSize="100px" borderRadius="full" />
           <Text fontSize="lg" fontWeight="bold">John Doe</Text>
-          <Text fontSize="md" color="gray.500">CEO, CompanyName</Text>
+          <Text fontSize="md" color="gray.400">CEO, CompanyName</Text>
         </VStack>
       </VStack>
 
