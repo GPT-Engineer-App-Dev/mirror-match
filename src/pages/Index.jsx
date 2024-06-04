@@ -1,5 +1,5 @@
 import { Container, Text, VStack, HStack, Button, Box, Image, Link } from "@chakra-ui/react";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaCheckCircle, FaQuoteLeft } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -46,6 +46,65 @@ const Index = () => {
           <Image src="/logos/statamic.png" alt="Statamic Logo" boxSize="100px" />
         </HStack>
       </VStack>
+
+      {/* New Section with Headline, Subheadline, and Image */}
+      <HStack spacing={8} py={20} alignItems="center" className="new-section-hstack">
+        <VStack align="start" spacing={4} className="new-section-vstack">
+          <Text fontSize="4xl" fontWeight="bold">Streamline Your Workflow</Text>
+          <Text fontSize="xl" color="gray.600">Our tools help you manage your business efficiently and effectively.</Text>
+        </VStack>
+        <Image src="/images/workflow.png" alt="Workflow Image" boxSize="400px" />
+      </HStack>
+
+      {/* New Section with Three Columns */}
+      <VStack spacing={8} py={20} alignItems="center">
+        <Text fontSize="4xl" fontWeight="bold">Our Features</Text>
+        <HStack spacing={8}>
+          <VStack align="center" spacing={4}>
+            <FaCheckCircle size="40px" color="blue.500" />
+            <Text fontSize="2xl" fontWeight="bold">Feature One</Text>
+            <Text fontSize="lg" color="gray.600">Description of feature one.</Text>
+          </VStack>
+          <VStack align="center" spacing={4}>
+            <FaCheckCircle size="40px" color="blue.500" />
+            <Text fontSize="2xl" fontWeight="bold">Feature Two</Text>
+            <Text fontSize="lg" color="gray.600">Description of feature two.</Text>
+          </VStack>
+          <VStack align="center" spacing={4}>
+            <FaCheckCircle size="40px" color="blue.500" />
+            <Text fontSize="2xl" fontWeight="bold">Feature Three</Text>
+            <Text fontSize="lg" color="gray.600">Description of feature three.</Text>
+          </VStack>
+        </HStack>
+      </VStack>
+
+      {/* New Testimonial Section */}
+      <VStack spacing={8} py={20} alignItems="center">
+        <Text fontSize="4xl" fontWeight="bold">What Our Clients Say</Text>
+        <VStack align="center" spacing={4} maxW="600px" textAlign="center">
+          <FaQuoteLeft size="40px" color="blue.500" />
+          <Text fontSize="xl" color="gray.600">"This product has transformed the way we do business. It's user-friendly and incredibly efficient."</Text>
+          <Image src="/images/client.jpg" alt="Client Image" boxSize="100px" borderRadius="full" />
+          <Text fontSize="lg" fontWeight="bold">John Doe</Text>
+          <Text fontSize="md" color="gray.500">CEO, CompanyName</Text>
+        </VStack>
+      </VStack>
+
+      {/* Responsive Adjustments */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .new-section-hstack {
+            flex-direction: column;
+            align-items: center;
+          }
+          .new-section-hstack img {
+            margin-top: 20px;
+          }
+          .new-section-vstack {
+            text-align: center;
+          }
+        }
+      `}</style>
     </Container>
   );
 };
